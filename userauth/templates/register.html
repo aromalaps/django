@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row w-50 d-flex justify-content-center align-items-center ">
+        <div class="col-5">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="container">
+                    <h1>Register form</h1>
+                   
+                    <hr class="w-75">
+                    <input type="text" placeholder="fname" name="first_name">
+                    <input type="text" placeholder="fname" name="last_name">
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+                    <input type="password" placeholder="conformPassword" name="cpassword" id="psw-repeat" required>
+                    <hr class="w-75">
+                    <button type="submit" class="registerbtn">Register</button>
+                </div>
+
+                <div class="container signin">
+                    <p>Already have an account? <a href="#">Sign in</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
